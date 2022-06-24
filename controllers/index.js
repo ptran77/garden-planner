@@ -1,4 +1,6 @@
-const { Router } = require('express');
-const homeRoutes = require('./home-routes');
+const router = require("express").Router();
+const homeRoutes = require("./home-routes.js");
 
-router.use('/', homeRoutes);
+router.use("/", homeRoutes);
+
+module.exports = router;
