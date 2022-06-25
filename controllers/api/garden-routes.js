@@ -70,7 +70,10 @@ router.post('/', withAuth, (req, res) => {
       plantIds: [1, 2, 3]
     }
   */
-  Garden.create(req.body)
+  Garden.create({
+    garden_name: req.body.garden_name,
+    user_id: req.session.user_id
+  })
     .then((garden) => {
       // If there are plants, we need to create pairings to bulk create in the GardenPlant model
       if (req.body.plantIds.length) {
@@ -80,7 +83,7 @@ router.post('/', withAuth, (req, res) => {
             plant_id
           };
         });
-        return GardenPlant.blukCreate(gardenPlantIdArr);
+        return GardenPlant.bulkCreate(gardenPlantIdArr);
       }
       // if no plants, just respond
       res.status(200).json(garden);
@@ -115,7 +118,7 @@ router.put('/:id', withAuth, (req, res) => {
       const gardenPlantIds = gardenPlants.map(({ plant_id }) => plant_id);
       // create filtered list of new plant_ids
       const newGardenPlants = req.body.plantIds
-        .filter((plant_id) => !gardenPlants.includes(plant_id))
+        .filter((plant_id) => !gardenPlantIds.includes(plant_id))
         .map((plant_id) => {
           return {
             garden_id: req.params.id,
@@ -129,8 +132,8 @@ router.put('/:id', withAuth, (req, res) => {
       
       // destroy the to be remove ones and add the new ones
       return Promise.all([
-        GardenPlants.destroy({ where: { id: gardenPlantsToRemove } }),
-        GardenPlants.bulkCreate({ newGardenPlants })
+        GardenPlant.destroy({ where: { id: gardenPlantsToRemove } }),
+        GardenPlant.bulkCreate(newGardenPlants)
       ]);
     })
     .then((updatedGardenPlants) => res.json(updatedGardenPlants))

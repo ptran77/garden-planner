@@ -22,10 +22,13 @@ router.get('/', (req, res) => {
 // Get an individual user and their gardens
 router.get('/:id', (req, res) => {
   User.findOne({
+    where: {
+      id: req.params.id
+    },
     attributes: { exclude: ['password'] },
     include: {
       model: Garden,
-      attributes: ['id', 'name']
+      attributes: ['id', 'garden_name']
     }
   })
     .then(dbUserData => {
