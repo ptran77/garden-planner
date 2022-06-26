@@ -30,3 +30,5 @@ Garden.init(
         modelName: 'garden'
     }
 );
+
+module.exports = Garden;
