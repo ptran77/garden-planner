@@ -15,13 +15,11 @@ Garden.belongsTo(User, {
 
 Garden.belongsToMany(Plant, {
     through: GardenPlant,
-    as: 'garden_plant',
     foreignKey: 'garden_id'
 });
 
 Plant.belongsToMany(Garden, {
     through: GardenPlant,
-    as: 'garden_plant',
     foreignKey: 'plant_id'
 });
 

@@ -39,3 +39,5 @@ Plant.init(
         modelName: 'plant'
     }
 );
+
+module.exports = Plant;
