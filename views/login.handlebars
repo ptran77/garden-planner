@@ -1,34 +1,23 @@
-<!-- LOGIN FORM -->
-<form class="login-form">
-    <div>
-        <label for="email-login">Email:</label>
-        <input type="text" id="email-login"/>
-    </div>
-    <div>
-        <label for="password-login">Password:</label>
-        <input type="text" id="password-login"/>
-    </div>
-    <div>
-        <button type="submit">Login</button>
-    </div>
-</form>
 
-<!-- SIGN UP FORM -->
-<form class="signup-form">
-    <div>
-        <label for="username-signup">Username:</label>
-        <input type="text" id="username-signup"/>
-    </div>
-    <div>
-        <label for="password-signup">Password:</label>
-        <input type="text" id="password-signup"/>
-    </div>
-    <div>
-        <button type="submit">Sign Up</button>
-    </div>
-</form>
-
-<!-- This script src's the frontend logic to forms 
-<script src="./javascript/login.js"></script>-->
-
-<!-- NOW WE NEED A ROUTE -->
+  <div class="w-full max-w-xs mx-auto mt-10 sm:max-w-sm md:max-w-md">
+    <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+      <h1 class="text-gray-900 text-3xl font-bold text-center mb-6">Sign in</h1>
+      <div class="mb-2">
+        <label for="username" class="block text-gray-700 text-sm uppercase tracking-wide font-bold mb-1">
+          Username
+        </label>
+        <input type="email" placeholder="Enter your email address..." class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:border-indigo-600" id="email">
+      </div>
+      <div class="mb-4">
+        <label for="password" class="block text-gray-700 text-sm uppercase tracking-wide font-bold mb-1">
+          Password
+        </label>
+        <input type="password" placeholder="Enter your password..." class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:border-indigo-600" id="password">
+      </div>
+      <div class="flex items-center justify-between">
+        <button type="button" class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+          Sign in
+        </button>
+       </div>
+    </form>
+  </div>

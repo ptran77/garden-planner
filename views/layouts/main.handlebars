@@ -25,6 +25,7 @@
     <div class="navbar">
       <a href="#home">Home</a>
       <a href="#community">Community</a>
+      
       <div class="dropdown">
         <button class="dropbtn">Dashboard
            <i class="fa fa-caret-down"></i>
@@ -33,13 +34,17 @@
           <a href="#">My Garden</a>
           <a href="#">Add Garden Item</a>
           <a href="#">Garden Zone Search</a>
-          <a href="#">Logout</a>
         </div>
       </div>
+      {{#if LoggedIn}}
+      <a href="#logout" class="logout">Logout</a>
+      {{else}}
+      <a href="/login" class="">Login</a> 
+      {{/if}}
     </div>
 
     <main>
-      {{body}}
+      {{{body}}}
     </main>
     <footer>
       Thanks for visiting!
@@ -47,5 +52,4 @@
   </div>
 
 </body>
-
 </html>
