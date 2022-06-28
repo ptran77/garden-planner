@@ -1,15 +1,30 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [],
+  content: [
+    './views/login.handlebars',
+    './views/*',
+    './views/layouts/main.handlebars'
+  ],
   theme: {
     screens: {
-      'laptop': '1024px',
-      // @media (min-width: 1024px)
-      'desktop': '1280px',
-      // @media (min-width: 1280px)
+      sm: '480px',
+      md: '768px',
+      lg: '976px',
+      xl: '1440px',
+    },
+    colors: {
+      'blue': '#1fb6ff',
+      'pink': '#ff49db',
+      'orange': '#ff7849',
+      'green': '#13ce66',
+      'gray-dark': '#273444',
+      'gray': '#8492a6',
+      'gray-light': '#d3dce6',
     },
     extend: {},
     fontFamily: {
+      sans: ['Graphik', 'sans-serif'],
+      serif: ['Merriweather', 'serif'],
       'display': ['Pacifico'],
       'body': ['Pangolin']
     },
