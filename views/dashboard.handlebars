@@ -13,6 +13,15 @@
   </section>
 </body>
 
+<!-- there is a list of gardens -->
+{{#if gardens.length}}
+<section class = "dashboard-gardens-list">
+  {{#each gardens as |garden|}}
+    {{> dashboardGardenInfo garden}}
+  {{/each}}
+</section>
+{{/if}}
+
 <script src="/js/logout.js"></script>
 
 
