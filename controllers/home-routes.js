@@ -32,6 +32,10 @@ router.get('/community/garden:id', (req, res) => {
   })
   res.render('communityGarden');
 
+});
+
+router.get('/zone', (req, res) => {
+  res.render('zoneSearch');
 })
 
 
