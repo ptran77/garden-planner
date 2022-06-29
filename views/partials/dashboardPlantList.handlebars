@@ -1,0 +1,8 @@
+<ul id="garden-list-items">
+  {{#each this}}
+  <li class="garden-item">
+    <div class="plant" data-id="{{this.id}}">{{this.name}}</div>
+    <button type="button" class="remove-plant">Remove</button>
+  <li>
+  {{/each}}
+</ul>

@@ -27,7 +27,7 @@ Plant.init(
             type: DataTypes.STRING,
             allowNull: false
         },
-        soild_type: {
+        soil_type: {
             type: DataTypes.STRING,
             allowNull: false
         }

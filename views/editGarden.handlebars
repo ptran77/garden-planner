@@ -1,13 +1,19 @@
-<main class="page-content">
+<section class="page-content">
+  <h3 id="garden-name">{{garden.garden_name}}</h3>
   <section class="task-list-wrapper">
     <h2 class="list-title">What are we growing?</h2>
-    <ul class="garden-list-items">
-      <li class="garden-item">Vegetables</li>
-      <li class="garden-item">Fruits</li>
-      <li class="garden-item">Herbs</li>
-      <li class="garden-item">Trees</li>
-      <li class="garden-item">Other</li>
-    </ul>
-    <button>ADD</button>
+    {{> dashboardPlantList garden.plants}}
+    <div class="dropdown">
+      <button class="dropbtn" id="add-plant">Add Plant</button>
+      <div class="dropdown-options" id="dropdown-plant-choices"></div>
+    </div>
   </section>
-</main>
+
+  <div class="edit-garden-buttons">
+    <button type="click" id="update-garden">Update Garden</button>
+    <button type="click" id="delete-garden">Delete Garden</button>
+  </div>
+</section>
+
+<script src="/js/plant-dropdown.js"></script>
+<script src="/js/edit-garden.js"></script>
