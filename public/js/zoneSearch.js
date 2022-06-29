@@ -2,7 +2,14 @@ var formEl = document.getElementById("#zoneForm");
 var formInputEl = document.getElementById("#searchZone");
 var searchBtnEl = document.getElementById("#searchBtn");
 var zoneResultContainerEl = document.getElementById("#zoneResult")
-var apiKey = '92d5a261cbmsh2670c43e09e3d07p15f894jsn89c9d2e082a5';
+
+const options = {
+    method: 'GET',
+    headers: {
+        'X-RapidAPI-Key': '92d5a261cbmsh2670c43e09e3d07p15f894jsn89c9d2e082a5',
+        'X-RapidAPI-Host': 'plant-hardiness-zone.p.rapidapi.com'
+    }
+};
 
 var formSubmitHandler = function(event) {
     // Prevent page from refreshing
@@ -21,16 +28,16 @@ var formSubmitHandler = function(event) {
         alert("Would you like to find your gardening zone?")
     }
 
-    getUserZone();
 };
 
 var buttonClickHandler = function(event) {
-    console.log("button clicked");
+    getUserZone();
 };
 
 var getUserZone = function(zone) {
+    var apiKey = '92d5a261cbmsh2670c43e09e3d07p15f894jsn89c9d2e082a5';
     // Format the API Url
-    var apiUrl = 'https://plant-hardiness-zone.p.rapidapi.com/zipcodes' + zone + apiKey;
+    var apiUrl = 'https://plant-hardiness-zone.p.rapidapi.com/zipcodes/90210' + zone + apiKey;
 
     // Make a get request to url
     fetch(apiUrl).then(function(response) {
@@ -55,16 +62,9 @@ var displayZone = function(event) {
 };
 
 // // Add event listeners to form and button
-formInputEl.addEventListener("submit", formSubmitHandler);
-searchBtnEl.addEventListener("click", buttonClickHandler);
+getUserZone();
+displayZone();
 
-// const options = {
-// 	method: 'GET',
-// 	headers: {
-// 		'X-RapidAPI-Key': '92d5a261cbmsh2670c43e09e3d07p15f894jsn89c9d2e082a5',
-// 		'X-RapidAPI-Host': 'plant-hardiness-zone.p.rapidapi.com'
-// 	}
-// };
 
 // fetch('https://plant-hardiness-zone.p.rapidapi.com/zipcodes', options)
 // 	.then(response => response.json())
