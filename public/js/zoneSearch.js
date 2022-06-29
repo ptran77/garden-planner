@@ -40,7 +40,9 @@ var getUserZone = function(zone) {
     var apiUrl = 'https://plant-hardiness-zone.p.rapidapi.com/zipcodes/90210' + zone + apiKey;
 
     // Make a get request to url
-    fetch(apiUrl).then(function(response) {
+    fetch(apiUrl, options).then(function(response) {
+
+        
         // Request successful
         if (response.ok) {
             console.log(response);
