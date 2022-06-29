@@ -48,4 +48,9 @@ router.get('/edit/:id', withAuth, (req, res) => {
         })
 })
 
+// create garden page
+router.get('/new', withAuth, (req, res) => {
+    res.render('createGarden', { loggedIn: true });
+})
+
 module.exports = router;
