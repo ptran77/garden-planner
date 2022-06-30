@@ -86,19 +86,19 @@ form label {
 }
 
 header {
-  border-bottom: 5px solid rgb(36,49,58);
+  border-bottom: 5px solid #b0d796;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color:#D6CDBF;
+  background-color:#3f3f3fff;
 }
 
 header h1 {
-  font-family: 'Pacifico', cursive;
-  color:rgb(31, 84, 122);
+  font-family: 'Playfair Display', serif;
+  color:rgb(250, 250, 250);
   font-size: 3em;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color:rgb(36,49,58);
+  -webkit-text-stroke-color:rgb(164, 174, 181);
   letter-spacing: 4px;
 }
 
@@ -107,15 +107,15 @@ header h1 {
  .navbar {
   overflow: hidden;
   background-color:
-  rgb(219,206,197);
+  #70ad47;
 }
 
 .navbar a {
   float: left;
   font-size: 16px;
-  font-family: Pangolin;
+  font-family:  'Playfair Display', serif;
   color:
-  rgb(36,49,58);
+  #3f3f3fff;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -134,22 +134,22 @@ header h1 {
   font-size: 16px;  
   border: none;
   outline: none;
-  color: rgb(31, 84, 122);
+  color: black;
   padding: 14px 16px;
   background-color: inherit;
-  font-family: Pangolin;
+  font-family: 'Playfair Display', serif;
   margin: 0;
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
   background-color:  
-  rgb(189, 177, 169);
+  #b1d49a;
 }
 
 .dropdown-options {
   display: none;
   position: absolute;
-  background-color: rgb(189, 177, 169);
+  background-color: #b1d49a;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -157,7 +157,7 @@ header h1 {
 
 .dropdown-options a {
   float: none;
-  color: rgb(31, 84, 122);
+  color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -165,7 +165,7 @@ header h1 {
 }
 
 .dropdown-options a:hover {
-  background-color: rgb(219,206,197);
+  background-color: #70ad47;
 }
 
 .dropdown:hover .dropdown-options {
@@ -182,7 +182,7 @@ header h1 {
  main {
   flex: 1;
   padding: 2% 4%;
-  background-color: rgba(105, 136, 158, 0.618);
+  background-color: #bee395ff;
 }
 
 footer {
