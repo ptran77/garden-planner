@@ -121,8 +121,16 @@ header h1 {
   text-decoration: none;
 }
 
- .logout {
+ #logout {
   color: rgb(233, 151, 0);
+  float: left;
+  font-size: 16px;
+  font-family: Pangolin;
+  color:
+  rgb(36,49,58);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none
 }
 
 .dropdown {
@@ -141,7 +149,7 @@ header h1 {
   margin: 0;
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn {
+.navbar a:hover, .dropdown:hover .dropbtn, #logout:hover{
   background-color:  
   rgb(189, 177, 169);
 }
