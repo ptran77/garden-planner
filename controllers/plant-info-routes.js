@@ -44,9 +44,9 @@ router.get('/:id', (req, res) => {
             return;
         }
         // serialize the data
-        const plant = dbPlantData.get({ plain: true });
+        const plant_info = dbPlantData.get({ plain: true });
         // pass data to template
-        res.render('single-plant', { plant });
+        res.render('single-plant', { plant_info });
     })
    .catch(err => {
     console.log(err);
