@@ -1,5 +1,6 @@
 const { Plant } = require('../models');
 const router = require('express').Router();
+const withAuth = require('../utils/auth');
 
 router.get('/', (req, res) => {
     Plant.findAll({
@@ -24,7 +25,7 @@ router.get('/', (req, res) => {
 });
 
 
-router.get('/:id', (req, res) => {
+router.get('/info/:id', (req, res) => {
     Plant.findOne({
         where: {
             id: req.params.id
@@ -54,7 +55,7 @@ router.get('/:id', (req, res) => {
    });
 });
 
-router.get('/add-plant', (req, res) => {
+router.get('/add-plant', withAuth, (req, res) => {
     res.render('add-plant')
 });
 

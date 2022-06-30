@@ -40,7 +40,8 @@
           </button>
           <div class="dropdown-options">
             <a href="/dashboard">My Garden</a>
-            <a href="#">Add Garden Item</a>
+            <a href="/plants">All Plants</a>
+            <a href="/plants/add-plant">Add Plant Item</a>
             <a href="#">Garden Zone Search</a>
           </div>
         </div>
@@ -58,6 +59,8 @@
         Thanks for visiting!
       </footer>
     </div>
-    <script src="./js/logout.js"></script>
+    {{#if loggedIn}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
   </body>
 </html>
