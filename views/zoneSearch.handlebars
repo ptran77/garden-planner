@@ -1,29 +1,52 @@
+
 <!-- heading -->
 <div class="">
   <div class="">
-    <h1> Search your gardening zone.</h1>
+    <h1><strong>Search your gardening zone</strong> </h1>
   </div>
 </div>
 <!-- End Heading -->
 
-<!-- Search Bar -->
+<!-- Search Section -->
 <div class="w-1/2 mt-10 ml-12">
-    <form id="zoneForm">
-      <div class="w-full relative">
-        <div class="absolute left-0 pl-2 flex items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="inline-block w-5 h-5 mt-1 text-gray-400">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-        </svg>
-        </div>
-        <input id="searchZone" type="text" name="query" class="bg-gray-200 block focus:ring-indigo-500 focus:border-indigo-500 border-blue-200 focus:outline-none focus:ring-2 py-1 pl-8 w-full rounded-md" placeholder="Enter your ZIP code" />
-        <button id="searchBtn" type="submit" class="btn">Find zone</button>
-      </div>
-    </form>
-</div>
-<!-- End Search Bar -->
+<section id="zoneSection" class="search col-2">
+  <div class="w-full relative">
+    <div class="absolute left-0 pl-2 flex items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="inline-block w-5 h-5 mt-1 text-gray-400">
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+      </svg>
+    </div>
 
-<div id="zoneResult" class="container mx-auto">
-  <p> Your gardening zone: </p>
+        <input
+          class="bg-gray-200 block focus:ring-indigo-500 focus:border-indigo-500 border-blue-200 focus:outline-none focus:ring-2 py-1 pl-8 w-full rounded-md"
+          id="search-zone"
+          type="text"
+          name="zipcode"
+          placeholder="Enter your ZIP code"
+        />
+        <button
+          class="btn"
+          id="btn"
+          type="button"
+        >
+          Find Zone
+        </button>
+
+        <!-- Search History -->
+        <div id="search-history">History:</div>
+  </div>
+</section>
 </div>
+<!-- End Search Section -->
+
+<!-- Zone Results Section -->
+<section  class="container mx-auto">
+  <div id="zone-info"> 
+     <div id="zone-result">
+      
+     </div>
+  </div>
+</section>
+<!-- End Zone Results Section -->
 
 <script src="/js/zoneSearch.js"></script>

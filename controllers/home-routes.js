@@ -1,4 +1,5 @@
 const { Garden } = require('../models');
+const { sequelize } = require('../models/User');
 
 const router = require('express').Router();
 
@@ -6,16 +7,32 @@ router.get('/', (req, res) => {
   res.render('login');
 });
 
+// USER LOGIN 
 router.get('/login', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/');
+  }
   res.render('login');
 });
 
+// USER SIGNUP
 router.get('/signup', (req, res) => {
   res.render('signup')
 })
 
 router.get('/community', (req, res) => {
-  Garden.findAll
+  console.log('======Community==Garden===========')
+  Garden.findAll ({
+    attributes: [
+      'id',
+      'garden_name',
+      'user_id',
+      [sequelize.literal('')]
+    ]
+  })
+  .then(dbGardenData => {
+    const communityGarden = dbGardenData.map(post => post.get({ plain: true }));
+  })
 
   res.render('community');
 });

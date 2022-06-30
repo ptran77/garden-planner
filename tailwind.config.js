@@ -1,10 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    './views/login.handlebars',
-    './views',
-    './views/layouts'
-  ],
+  content: [],
   plugins: {
     tailwindcss: {},
     autoprefixer: {},
