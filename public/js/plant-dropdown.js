@@ -19,7 +19,7 @@ function createPlantChoices(plants) {
   for (let i = 0; i < plants.length; i++) {
     let plantChoice = document.createElement("div");
     plantChoice.textContent = plants[i].name;
-    plantChoice.setAttribute("class", "dropdown-plant-choice");
+    plantChoice.setAttribute("class", "dropdown-plant-choice hover:bg-blue-300");
     plantChoice.setAttribute("data-id", plants[i].id);
     plantDropdown.append(plantChoice);
   }

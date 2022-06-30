@@ -201,13 +201,29 @@ footer {
   font-size: 110%;
 } 
 
-.garden-item{
+.garden-item {
   width: 20%;
   margin: auto;
+}
+
+.remove-plant {
+  display: none;
+}
+
+.garden-item:hover .remove-plant {
+  display: inline;
 }
 
 .plant-dropdown {
   width: 20%;
   margin: auto;
   text-align: center;
+}
+
+#dropdown-plant-choices {
+  display: none;
+}
+
+.plant-dropdown:hover #dropdown-plant-choices {
+  display: block;
 }
