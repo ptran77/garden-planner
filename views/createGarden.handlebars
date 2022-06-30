@@ -1,0 +1,21 @@
+<section class="page-content bg-orange-200 p-4 rounded-lg">
+  <label for="garden-name" class="block text-gray-700 text-lg uppercase tracking-wide font-bold mb-1">
+   Garden Name
+  </label>
+  <input id="garden-name" type="garden-name" placeholder="Enter Garden Name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:border-indigo-600">
+  <section class="task-list-wrapper">
+    <h2 class="list-title inline-block text-center min-w-full text-gray-700 text-sm uppercase tracking-wide font-bold mb-1">What are we growing?</h2>
+    <div class="plant-dropdown bg-blue-100 border-2 border-black rounded-lg text-center mb-2">
+      <div id="add-plant">Add Plant</div>
+      <div id="dropdown-plant-choices"></div>
+    </div>
+    <ul id="garden-list-items"></ul>
+  </section>
+  <div class="text-center">
+    <button type="click" id="create-garden" class="bg-green-500 hover:bg-green-700 p-1">Create Garden</button>
+  </div>
+</section>
+
+<script src="/js/plant-dropdown.js"></script>
+<script src="/js/edit-garden.js"></script>
+<script src="/js/create-garden.js"></script>

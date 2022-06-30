@@ -21,6 +21,8 @@
   </head>
 
   <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <div class="wrapper">
       <header>
         <h1>
@@ -37,13 +39,13 @@
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-options">
-            <a href="#">My Garden</a>
+            <a href="/dashboard">My Garden</a>
             <a href="#">Add Garden Item</a>
             <a href="#">Garden Zone Search</a>
           </div>
         </div>
-        {{#if LoggedIn}}
-          <a href="#logout" class="logout">Logout</a>
+        {{#if loggedIn}}
+          <div id="logout">Logout</div>
         {{else}}
           <a href="/login" class="">Login</a>
         {{/if}}
@@ -56,6 +58,6 @@
         Thanks for visiting!
       </footer>
     </div>
-
+    <script src="./js/logout.js"></script>
   </body>
 </html>
