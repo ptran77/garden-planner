@@ -12,15 +12,15 @@ function addPlantToGarden(plant, id) {
 
   if(!plantAlreadyExists) {
     // make list item for plantlist
-    let gardenItem = document.createElement('li');
-    gardenItem.setAttribute("class", "garden-item");
+    let gardenItem = document.createElement('div');
+    gardenItem.setAttribute("class", "garden-item bg-blue-100 border-2 border-black rounded-lg text-center mb-2");
     let plantName = document.createElement('div');
     plantName.textContent = plant;
     plantName.setAttribute("class", "plant");
     plantName.setAttribute("data-id", id);
     let removeBtn = document.createElement("button");
     removeBtn.setAttribute("type", "button");
-    removeBtn.setAttribute("class", "remove-plant");
+    removeBtn.setAttribute("class", "remove-plant bg-red-500 hover:bg-red-700 p-2 ");
     removeBtn.textContent = "Remove";
     gardenItem.appendChild(plantName);
     gardenItem.appendChild(removeBtn);

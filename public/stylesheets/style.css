@@ -192,3 +192,14 @@ footer {
   padding: 1%;
   font-size: 110%;
 } 
+
+.garden-item{
+  width: 20%;
+  margin: auto;
+}
+
+.plant-dropdown {
+  width: 20%;
+  margin: auto;
+  text-align: center;
+}

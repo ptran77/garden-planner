@@ -1,9 +1,9 @@
-<section class="page-content">
-  <h3 id="garden-name">{{garden.garden_name}}</h3>
+<section class="page-content bg-orange-200 p-4 rounded-lg">
+  <h3 id="garden-name" class="text-center min-w-full text-gray-700 text-lg uppercase tracking-wide font-bold mb-1">{{garden.garden_name}}</h3>
   <section class="task-list-wrapper">
-    <h2 class="list-title">What are we growing?</h2>
+    <h2 class="list-title text-center min-w-full text-gray-700 text-md uppercase tracking-wide font-bold mb-1">What are we growing?</h2>
     {{> dashboardPlantList garden.plants}}
-    <div class="dropdown">
+    <div class="dropdown plant-dropdown">
       <button class="dropbtn" id="add-plant">Add Plant</button>
       <div class="dropdown-options" id="dropdown-plant-choices"></div>
     </div>

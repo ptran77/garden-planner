@@ -17,7 +17,7 @@ async function getPlantDropDown() {
 
 function createPlantChoices(plants) {
   for (let i = 0; i < plants.length; i++) {
-    let plantChoice = document.createElement("button");
+    let plantChoice = document.createElement("div");
     plantChoice.textContent = plants[i].name;
     plantChoice.setAttribute("class", "dropdown-plant-choice");
     plantChoice.setAttribute("data-id", plants[i].id);

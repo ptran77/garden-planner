@@ -36,6 +36,6 @@ router.get('/community/garden:id', (req, res) => {
 
 
 
-router.get
+
 
 module.exports = router;
