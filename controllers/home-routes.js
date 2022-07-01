@@ -1,5 +1,4 @@
 const { Garden } = require('../models');
-const { sequelize } = require('../models/User');
 
 const router = require('express').Router();
 
