@@ -52,10 +52,7 @@ router.get('/community/garden:id', (req, res) => {
 
 router.get('/zone', (req, res) => {
   res.render('zoneSearch');
-})
+});
 
-
-
-router.get
 
 module.exports = router;
