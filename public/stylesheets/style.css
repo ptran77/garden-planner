@@ -121,8 +121,16 @@ header h1 {
   text-decoration: none;
 }
 
- .logout {
+ #logout {
   color: rgb(233, 151, 0);
+  float: left;
+  font-size: 16px;
+  font-family: Pangolin;
+  color:
+  rgb(36,49,58);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none
 }
 
 .dropdown {
@@ -141,7 +149,7 @@ header h1 {
   margin: 0;
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn {
+.navbar a:hover, .dropdown:hover .dropbtn, #logout:hover{
   background-color:  
   #b1d49a;
 }
@@ -192,3 +200,30 @@ footer {
   padding: 1%;
   font-size: 110%;
 } 
+
+.garden-item {
+  width: 20%;
+  margin: auto;
+}
+
+.remove-plant {
+  display: none;
+}
+
+.garden-item:hover .remove-plant {
+  display: inline;
+}
+
+.plant-dropdown {
+  width: 20%;
+  margin: auto;
+  text-align: center;
+}
+
+#dropdown-plant-choices {
+  display: none;
+}
+
+.plant-dropdown:hover #dropdown-plant-choices {
+  display: block;
+}

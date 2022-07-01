@@ -16,14 +16,23 @@
       href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/stylesheets/style.css"/>
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
   <body>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
+    ></script>
     <div class="wrapper">
       <header>
         <h1>
@@ -40,13 +49,14 @@
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-options">
-            <a href="#">My Garden</a>
-            <a href="#">Add Garden Item</a>
+            <a href="/dashboard">My Garden</a>
+            <a href="/plants">All Plants</a>
+            <a href="/plants/add-plant">Add Plant Item</a>
             <a href="#">Garden Zone Search</a>
           </div>
         </div>
-        {{#if LoggedIn}}
-          <a href="#logout" class="logout">Logout</a>
+        {{#if loggedIn}}
+          <div id="logout">Logout</div>
         {{else}}
           <a href="/login" class="">Login</a>
         {{/if}}
@@ -59,7 +69,8 @@
         Thanks for visiting!
       </footer>
     </div>
-  <script src="https://cdn.tailwindcss.com"></script>
-
+    {{#if loggedIn}}
+      <script src="/js/logout.js"></script>
+    {{/if}}
   </body>
 </html>
