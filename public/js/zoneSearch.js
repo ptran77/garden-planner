@@ -8,6 +8,7 @@ let searchBtn = document.querySelector("#btn");
 // Zone information Section
 let zoneInfo = document.querySelector("#zone-info")
 let zoneResult = document.querySelector('#zone-result')
+
 // List of input zones
 let searchZones = [];
 
@@ -23,31 +24,19 @@ let getZone = function() {
 
 // Function to get zone information
 let getZoneInfo = function(zone) {
-  const options = {
-    method: 'GET',
-    headers: {
-      'X-RapidAPI-Key': '92d5a261cbmsh2670c43e09e3d07p15f894jsn89c9d2e082a5',
-      'X-RapidAPI-Host': 'usda-plant-hardiness-zones.p.rapidapi.com'
-    }
-  };
-
-  // Make API call to get information
-  let apiUrl = 'https://usda-plant-hardiness-zones.p.rapidapi.com/zone/' + zone;
-  fetch(apiUrl, options)
-  .then(function(response) {
-    if (response.ok) {
-      console.log(response);
-      response.json().then(function(zone) {
-        console.log(zone);
-        zoneResult.textContent = zone;
-      });
-    } else {
-      alert ('No zone found');
-    }
-  })
-  .catch(function(error) {
-    alert('There was an error')
+  const response = await fetch('/apiCall/zone/'+zone,  {
+    method: 'get',
+    headers: { 'Content-Type': 'application/json'}
   });
+
+  // check the response status
+   if (response.ok) {
+    response.json().then(function(result) {
+      zoneResult.textContent = result.hardiness_zone;
+    })
+  } else {
+    alert(response.statusText);
+  }
 };
 
 

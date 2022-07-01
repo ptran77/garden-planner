@@ -9,5 +9,4 @@ router.use('/', homeRoutes);
 router.use('/dashboard', dashboardRoutes);
 router.use('/plants', plantRoutes);
 
-
 module.exports = router;
