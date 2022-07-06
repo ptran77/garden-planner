@@ -1,52 +1,169 @@
-
-<!-- heading -->
-<div class="">
-  <div class="">
-    <h1><strong>Search your gardening zone</strong> </h1>
-  </div>
-</div>
-<!-- End Heading -->
-
-<!-- Search Section -->
-<div class="w-1/2 mt-10 ml-12">
-<section id="zoneSection" class="search col-2">
-  <div class="w-full relative">
-    <div class="absolute left-0 pl-2 flex items-center">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="inline-block w-5 h-5 mt-1 text-gray-400">
-         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-      </svg>
+<div
+  class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl"
+>
+  <div class="md:flex">
+    <div class="md:shrink-0">
+      <img
+        class="h-48 w-full object-cover md:h-full md:w-48"
+        src="./images/zoe-schaeffer-tbiV-yc903g-unsplash.jpg"
+        alt="Hand holding sprouts"
+      />
     </div>
-
-        <input
-          class="bg-gray-200 block focus:ring-indigo-500 focus:border-indigo-500 border-blue-200 focus:outline-none focus:ring-2 py-1 pl-8 w-full rounded-md"
-          id="search-zone"
-          type="text"
-          name="zipcode"
-          placeholder="Enter your ZIP code"
-        />
-        <button
-          class="btn"
-          id="btn"
-          type="button"
-        >
-          Find Zone
-        </button>
-
-        <!-- Search History -->
-        <div id="search-history">History:</div>
+    <div class="p-8">
+      <div
+        class="uppercase tracking-wide text-sm text-indigo-500 font-semibold"
+      >Know your planting zone</div>
+      <a
+        href="#"
+        url="https://garden.org/nga/zipzone/"
+        class="block mt-1 text-lg leading-tight font-medium text-black hover:underline"
+      >USDA Planting Zone Map</a>
+      <p class="mt-2 text-slate-500">As a beginner gardener, you might see a lot
+        of terminology that isn't familiar, especially if someone asks what
+        "zone" are you in.
+        <br />
+        To sum it up, there are certain plants that will struggle to grow
+        depending on what zone you're in. You can click the link above to enter
+        your zipcode that will tell you your zone or refer to the map below.
+      </p>
+    </div>
   </div>
-</section>
 </div>
-<!-- End Search Section -->
+<br />
+<br />
 
-<!-- Zone Results Section -->
-<section  class="container mx-auto">
-  <div id="zone-info"> 
-     <div id="zone-result">
-      
-     </div>
+<img
+  class="max-w-full h-auto shadow-lg"
+  src="https://cdn.gardenchronicle.com/gc/2020/09/10210408/map.jpg"
+  alt="USDA garden zone map"
+/>
+{{! GROWING ZONE 1-2 }}
+<div class="flex justify-center">
+  <div
+    class="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg"
+  >
+    <img
+      class="w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg"
+      src="./images/k-mitch-hodge-KmaHtG5j4qU-unsplash.jpg"
+      alt="cold-woods"
+    />
+    <div class="p-6 flex flex-col justify-start">
+      <h5 class="text-blue-900 text-xl font-serif font-bold mb-2">Growing Zone
+        1-2</h5>
+      <p class="text-gray-700 text-base mb-4">
+        With cold temperatures and a short growing season, it is recommended to
+        grow indoors utilizing grow lights or heaters to really maximize your
+        outcome. However, there are still seeds that can be grown in-ground like
+        dill, peas, radishes and spinach in April.
+      </p>
+      <p class="text-gray-600 text-xs">Last updated 3 mins ago</p>
+    </div>
   </div>
-</section>
-<!-- End Zone Results Section -->
-
-<script src="/js/zoneSearch.js"></script>
+</div>
+<br />
+{{! GROWING ZONE 3-4 }}
+<div class="flex justify-center">
+  <div
+    class="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg"
+  >
+    <img
+      class="w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg"
+      src="./images/tony-reid-UMJUr3st0AE-unsplash.jpg"
+      alt="tony-reid"
+    />
+    <div class="p-6 flex flex-col justify-start">
+      <h5 class="text-blue-900 text-xl font-serif font-bold mb-2">Growing Zone
+        3-4</h5>
+      <p class="text-gray-700 text-base mb-4">
+        Temperatures warm a bit but the conditions are a bit similar to Zones 1
+        and 2 with a short growing season. Fret not, vegetables like squash,
+        cucumbers and leafy greens can thrive in these zones.
+      </p>
+      <p class="text-gray-600 text-xs">Last updated 10 mins ago</p>
+    </div>
+  </div>
+</div>
+<br />
+{{! GROWING ZONE 5-7 }}
+<div class="flex justify-center">
+  <div
+    class="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg"
+  >
+    <img
+      class="w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg"
+      src="./images/jed-owen-ajZibDGpPew-unsplash.jpg"
+      alt="farming-tractor-collecting-harvest"
+    />
+    <div class="p-6 flex flex-col justify-start">
+      <h5 class="text-blue-900 text-xl font-serif font-bold mb-2">Growing Zone
+        5-7</h5>
+      <p class="text-gray-700 text-base mb-4">
+        The growing season spreads a bit in these zones with the ability to
+        plant seeds in ground as early as March-April. Asparagus, beets,
+        broccoli, cabbage, leafy greens, potatoes and turnips are among the
+        vegetables that will thrive in these locations.
+      </p>
+      <p class="text-gray-600 text-xs">Last updated 1 hour ago</p>
+    </div>
+  </div>
+</div>
+<br />
+{{! GROWING ZONE 8-10 }}
+<div class="flex justify-center">
+  <div
+    class="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg"
+  >
+    <img
+      class="w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg"
+      src="./images/bastian-pudill--DvjBubKXsg-unsplash.jpg"
+      alt="heat-climate-desert"
+    />
+    <div class="p-6 flex flex-col justify-start">
+      <h5 class="text-blue-900 text-xl font-serif font-bold mb-2">Growing Zone
+        8-10</h5>
+      <p class="text-gray-700 text-base mb-4">
+        Things start heating up in these zones. Practically anything can grow
+        successfully in these zones - growers have the ability to grow even
+        until late Winter. Temperatures can get too hot, however, so precautions
+        should be taken to prevent leaf burn and proper water intake.
+      </p>
+      <p class="text-gray-600 text-xs">Last updated 25 mins ago</p>
+    </div>
+  </div>
+</div>
+<br />
+{{! GROWING ZONE 11-13 }}
+<div class="flex justify-center">
+  <div
+    class="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg"
+  >
+    <img
+      class="w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg"
+      src="./images/ambitious-creative-co-rick-barrett-VEYWvGj31n8-unsplash.jpg"
+      alt="bunch-of-bananas"
+    />
+    <div class="p-6 flex flex-col justify-start">
+      <h5 class="text-blue-900 text-xl font-serif font-bold mb-2">Growing Zone
+        11-13</h5>
+      <p class="text-gray-700 text-base mb-4">
+        In these zones, things are really heating up. Beets, mangos, begonias,
+        African breadfruit, bush beans, summer squash and borage are great to
+        plant in these zones.
+      </p>
+      <p class="text-gray-600 text-xs">Last updated 17 mins ago</p>
+    </div>
+  </div>
+</div>
+<br />
+{{! flex flex-wrap justify-center">
+  
+  <br>
+  <h4 class="font-bold text-2xl mt-0 mb-2 text-black-600">Growing Zones 1-2</h4>
+  <p>
+    Sit amet massa vitae tortor condimentum lacinia quis. Ornare arcu dui
+    vivamus arcu felis bibendum ut. Consectetur adipiscing elit duis tristique
+    sollicitudin. Volutpat lacus laoreet non curabitur. Magna fringilla urna
+    porttitor rhoncus. Ultricies leo integer malesuada nunc vel risus commodo
+    viverra. Ipsum a arcu cursus vitae congue. Imperdiet dui accumsan sit amet
+    nulla facilisi. Tincidunt dui ut ornare lectus sit.</p>
+</div> }}

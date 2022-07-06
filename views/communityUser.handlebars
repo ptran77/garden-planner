@@ -1,0 +1,28 @@
+<article class="post">
+  <div class="title">
+    <a href="{{garden.id}}" target="_blank">{{garden.garden_name}}</a>
+    <span>({{garden.id}})</span>
+  </div>
+  <div class="meta">
+    By {{garden.user.username}}
+    |
+    <a href="/community/{{garden.id}}">{{garden.comments.length}} comment(s)</a>
+  </div>
+  {{#if loggedIn}}
+  <form class="comment-form">
+    <div>
+      <textarea name="comment-body"></textarea>
+    </div>
+
+    <div>
+      <button type="submit">add comment</button>
+      <button type="button" class="upvote-btn">upvote</button>
+    </div>
+  </form>
+  {{/if}}
+
+  {{> }}
+</article>
+{{#if loggedIn}}
+<script src=""></script>
+{{/if}}

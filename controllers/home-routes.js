@@ -1,60 +1,91 @@
-const { Garden } = require('../models');
+const { Garden, User } = require("../models");
 
-const router = require('express').Router();
+const router = require("express").Router();
 
-router.get('/', (req, res) => {
-  res.render('login');
+router.get("/", (req, res) => {
+  res.render("login");
 });
 
-// USER LOGIN 
-router.get('/login', (req, res) => {
+// USER LOGIN
+router.get("/login", (req, res) => {
   if (req.session.loggedIn) {
-    res.redirect('/');
+    res.redirect("/");
+    return;
   }
-  res.render('login');
+  // take user to login page
+  res.render("login");
 });
 
 // USER SIGNUP
-router.get('/signup', (req, res) => {
-  res.render('signup')
-})
+router.get("/signup", (req, res) => {
+  res.render("signup");
+});
 
-router.get('/community', (req, res) => {
-  console.log('======Community==Garden===========')
-  Garden.findAll ({
+router.get("/community", (req, res) => {
+  console.log('======================');
+  Garden.findAll({
     attributes: [
-      'id',
-      'garden_name',
-      'user_id',
-      [sequelize.literal('')]
+      'id', 'garden_name', 'user_id'
+    ],
+    include: [
+      {
+        model: User,
+        attributes: ['username']
+      }
     ]
   })
-  .then(dbGardenData => {
-    const communityGarden = dbGardenData.map(post => post.get({ plain: true }));
-  })
-
-  res.render('community');
-});
-
-router.get('/community/garden:id', (req, res) => {
-  Garden.findOne ({
-    where: {
-      id: req.params.id
-    }
     .then(dbGardenData => {
+      const gardens = dbGardenData.map(garden => garden.get({ plain: true }));
 
+      // Render the community page
+      res.render('community', {
+        gardens,
+        loggedIn: req.session.loggedIn
+      });
     })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
 
+router.get("/community/garden:id", (req, res) => {
+  Garden.findOne({
+    where: {
+      id: req.params.id,
+    },
+    attributes: [
+      'id', 'garden_name', 'user_id'
+    ],
+    include: [
+      {
+      model: User,
+      attributes: ['username']
+      }
+    ]
   })
-  res.render('communityGarden');
+    .then(dbGardenData => {
+      if (!dbGardenData) {
+        res.status(404).json({ message: 'No gardens found with this id' });
+        return;
+      }
 
+      const garden = dbGardenData.get({ plain: true });
+
+      // Render single garden page
+      res.render('single-garden', {
+        garden,
+        loggedIn: req.session.loggedIn
+      });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
 
-router.get('/zone', (req, res) => {
-  res.render('zoneSearch');
+router.get("/zone", (req, res) => {
+  res.render("zoneSearch");
 });
-
-
-
 
 module.exports = router;
