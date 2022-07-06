@@ -2,7 +2,8 @@
   box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
   height: 100%;
   padding: 0;
   margin: 0;
@@ -12,39 +13,41 @@ body, html {
 
 a {
   text-decoration: none;
-  color: #D6CDBF;
+  color: #d6cdbf;
   font-weight: bold;
-  transition: color .1s;
-  }
+  transition: color 0.1s;
+}
 
 a:hover {
   color: #000000;
 }
 
 button {
-  background-color: #D6CDBF;
+  background-color: #d6cdbf;
   border: 0;
   padding: 2%;
   color: rgb(0, 0, 0);
   font-weight: bold;
-  transition: background-color .1s;
+  transition: background-color 0.1s;
   cursor: pointer;
   border-radius: 5px;
 }
 
 button:hover {
-  background-color: #AB9A80;
+  background-color: #151815;
 }
 
-textarea, input {
-  padding: .5%;
+textarea,
+input {
+  padding: 0.5%;
   border-radius: 5px;
   border: 1px solid #ccc;
 }
 
-textarea:focus, input:focus {
+textarea:focus,
+input:focus {
   outline: none;
-  border: 1px solid #525A41;
+  border: 1px solid #525a41;
 }
 
 textarea {
@@ -52,19 +55,18 @@ textarea {
   min-height: 100px;
 }
 
-input[type=text] {
+input[type="text"] {
   width: 50%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
- 
 }
 
 form {
-  background-color: #D6CDBF;
+  background-color: #d6cdbf;
   padding: 12px 20px;
   border-radius: 10px;
-} */
+}
 /* *
 form > div {
   margin-bottom: 2%;
@@ -72,7 +74,7 @@ form > div {
 **/
 form label {
   display: block;
-  font-family: 'Pangolin';
+  font-family: "Pangolin";
   font-weight: bold;
 }
 
@@ -90,47 +92,44 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color:#3f3f3fff;
+  background-color: #3f3f3fff;
 }
 
 header h1 {
-  font-family: 'Playfair Display', serif;
-  color:rgb(250, 250, 250);
+  font-family: "Playfair Display", serif;
+  color: rgb(250, 250, 250);
   font-size: 3em;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color:rgb(164, 174, 181);
+  -webkit-text-stroke-color: rgb(164, 174, 181);
   letter-spacing: 4px;
 }
 
 
 /* NAV BAR */
- .navbar {
+.navbar {
   overflow: hidden;
-  background-color:
-  #70ad47;
+  background-color: #70ad47;
 }
 
 .navbar a {
   float: left;
   font-size: 16px;
-  font-family:  'Playfair Display', serif;
-  color:
-  #3f3f3fff;
+  font-family: "Playfair Display", serif;
+  color: #3f3f3fff;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
- #logout {
+#logout {
   color: rgb(233, 151, 0);
   float: left;
   font-size: 16px;
   font-family: Pangolin;
-  color:
-  rgb(36,49,58);
+  color: rgb(36, 49, 58);
   text-align: center;
   padding: 14px 16px;
-  text-decoration: none
+  text-decoration: none;
 }
 
 .dropdown {
@@ -139,19 +138,20 @@ header h1 {
 }
 
 .dropdown .dropbtn {
-  font-size: 16px;  
+  font-size: 16px;
   border: none;
   outline: none;
   color: black;
   padding: 14px 16px;
   background-color: inherit;
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   margin: 0;
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn, #logout:hover{
-  background-color:  
-  #b1d49a;
+.navbar a:hover,
+.dropdown:hover .dropbtn,
+#logout:hover {
+  background-color: #b1d49a;
 }
 
 .dropdown-options {
@@ -159,7 +159,7 @@ header h1 {
   position: absolute;
   background-color: #b1d49a;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -178,16 +178,16 @@ header h1 {
 
 .dropdown:hover .dropdown-options {
   display: block;
-} */
+}
 /* END NAV BAR */
 
- nav {
+nav {
   word-spacing: 2em;
-  font-family: 'Pangolin', cursive;
+  font-family: "Pangolin", cursive;
   font-size: 1.2em;
-} 
+}
 
- main {
+main {
   flex: 1;
   padding: 2% 4%;
   background-color: #bee395ff;
@@ -199,7 +199,7 @@ footer {
   justify-content: center;
   padding: 1%;
   font-size: 110%;
-} 
+}
 
 .garden-item {
   width: 20%;

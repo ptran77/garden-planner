@@ -21,6 +21,10 @@ router.get("/signup", (req, res) => {
   res.render("signup");
 });
 
+router.get("/home", (req, res) => {
+  res.render("homepage")
+});
+
 router.get("/community", (req, res) => {
   console.log('======================');
   Garden.findAll({
