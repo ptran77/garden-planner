@@ -6,6 +6,7 @@
 - [Challenge Criteria](#challenge-criteria)
 - [Development Process](#development-process)
 - [Presentation](#presentation)
+- [Tools](#tools)
 - [Installation](#installation)
 - [Team](#team)
 
@@ -67,6 +68,23 @@ _Deploy to Heroku_
 ## Presentation
 
 [Garden Planner Slides](https://docs.google.com/presentation/d/1SDK5P7pPKacl9kHSVmECmvhrcDqN86WU9VKHXsJtzis/edit?usp=sharing)
+
+## Tools
+
+Back-End
+
+- MySQL
+- Sequelize ORM
+- Node.js
+- Express.js
+- .env
+
+Front-End
+
+- Handlebars template engine
+- Tailwind CSS
+- HTML 
+- CSS
 
 ## Installation
 
