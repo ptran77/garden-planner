@@ -16,7 +16,7 @@ router.get('/signup', (req, res) => {
 
 router.get('/community', (req, res) => {
   Garden.findAll ({
-    attributes: ['id', 'garden_name'], 
+    attributes: ['id', 'garden_name', 'created_at'], 
     include: {
       model: User, 
       attributes: ['username'] 
