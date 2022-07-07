@@ -16,7 +16,10 @@ router.get('/', (req, res) => {
     .then(dbPlantData => {
         // serialize data before handing it to the template
         const plants = dbPlantData.map(plant => plant.get({ plain: true }));
-        res.render('plants', { plants });
+        res.render('plants', {
+            plants,
+            loggedIn: req.session.loggedIn
+        });
     })
     .catch(err => {
         console.log(err);
@@ -47,7 +50,10 @@ router.get('/info/:id', (req, res) => {
         // serialize the data
         const plant_info = dbPlantData.get({ plain: true });
         // pass data to template
-        res.render('single-plant', { plant_info });
+        res.render('single-plant', {
+            plant_info,
+            loggedIn: req.session.loggedIn
+        });
     })
    .catch(err => {
     console.log(err);
@@ -56,7 +62,9 @@ router.get('/info/:id', (req, res) => {
 });
 
 router.get('/add-plant', withAuth, (req, res) => {
-    res.render('add-plant')
+    res.render('add-plant', {
+        loggedIn: req.session.loggedIn
+    })
 });
 
 module.exports = router;

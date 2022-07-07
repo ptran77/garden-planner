@@ -1,10 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    './views/login.handlebars',
-    './views/*',
-    './views/layouts/main.handlebars'
-  ],
+  content: [],
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
   theme: {
     screens: {
       sm: '480px',
@@ -21,7 +21,11 @@ module.exports = {
       'gray': '#8492a6',
       'gray-light': '#d3dce6',
     },
-    extend: {},
+    extend: {
+      spacing: {
+        '5px': '5px',
+      }
+    },
     fontFamily: {
       sans: ['Graphik', 'sans-serif'],
       serif: ['Merriweather', 'serif'],
@@ -29,5 +33,4 @@ module.exports = {
       'body': ['Pangolin']
     },
   },
-  plugins: [],
 }
