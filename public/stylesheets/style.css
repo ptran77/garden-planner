@@ -227,3 +227,22 @@ footer {
 .plant-dropdown:hover #dropdown-plant-choices {
   display: block;
 }
+
+.plants {
+  background: #D6CDBF;
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 5px;
+  margin: 2px;
+}
+
+#add-plant-btn {
+  background-color: black;
+  border: 0;
+  padding: 2%;
+  color: #D6CDBF;
+  font-weight: bold;
+  transition: background-color .1s;
+  cursor: pointer;
+  border-radius: 5px;
+}
