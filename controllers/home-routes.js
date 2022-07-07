@@ -1,4 +1,4 @@
-const { Garden } = require('../models');
+const { Garden, User, Plant } = require('../models');
 
 const router = require('express').Router();
 
@@ -20,41 +20,53 @@ router.get('/signup', (req, res) => {
 })
 
 router.get('/community', (req, res) => {
-  console.log('======Community==Garden===========')
   Garden.findAll ({
-    attributes: [
-      'id',
-      'garden_name',
-      'user_id',
-      [sequelize.literal('')]
-    ]
+    attributes: ['id', 'garden_name', 'created_at'], 
+    include: {
+      model: User, 
+      attributes: ['username'] 
+    }
   })
-  .then(dbGardenData => {
-    const communityGarden = dbGardenData.map(post => post.get({ plain: true }));
+  .then(dbGardenData =>{
+    const gardens = dbGardenData.map(garden => garden.get({ plain: true }))
+    res.render('community',{
+      gardens,
+      loggedIn: req.session.loggedIn
+    })
   })
 
-  res.render('community');
+
 });
 
-router.get('/community/garden:id', (req, res) => {
+router.get('/community/garden/:id', (req, res) => {
   Garden.findOne ({
     where: {
       id: req.params.id
-    }
-    .then(dbGardenData => {
-
-    })
-
+    },
+    attributes: ['id', 'garden_name'], 
+    include:[
+      {
+        model: User, 
+        attributes: ['username'] 
+      },
+      {
+       model: Plant, 
+       attributes: ["id", "name", "type"]
+      }
+    ]  
   })
-  res.render('communityGarden');
+  .then(dbGardenData =>{
+    const garden = dbGardenData.get({ plain: true });
+    res.render('one-garden',{
+      garden,
+      loggedIn: req.session.loggedIn
+    })
+  })
 
 });
 
 router.get('/zone', (req, res) => {
   res.render('zoneSearch');
 });
-
-
-
 
 module.exports = router;
