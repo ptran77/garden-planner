@@ -228,7 +228,7 @@ footer {
   display: block;
 }
 
-@media screen and (max-width: 980px) {
+/* @media screen and (max-width: 980px) {
   header {
    position: relative;
   }
@@ -238,4 +238,4 @@ footer {
   header {
      position: relative;
   }
-}
+} */
