@@ -15,27 +15,57 @@ router.get('/signup', (req, res) => {
 })
 
 router.get('/community', (req, res) => {
-  Garden.findAll
+  Garden.findAll ({
+    attributes: ['id', 'garden_name','created at'], 
+    include: {
+      model: User, 
+      attributes: ['username'] 
+    }
+  })
+  .then(dbGardenData =>{
+    const gardens = dbGardenData.map(garden => garden.get({
+      plain: true 
+    }))
+    res.render('community',{
+      gardens,
+      loggedIn: req.session.loggedIn
+    })
+  })
 
-  res.render('community');
+
 });
 
-router.get('/community/garden:id', (req, res) => {
+router.get('/community/garden/:id', (req, res) => {
   Garden.findOne ({
     where: {
       id: req.params.id
-    }
-    .then(dbGardenData => {
-
-    })
-
+    },
+    attributes: ['id', 'garden_name','created at'], 
+    include:[
+      {
+        model: User, 
+        attributes: ['username'] 
+      },
+      {
+       model: Plant, 
+       attributes: ["id", "name", "type"]
+      }
+    ]  
   })
-  res.render('communityGarden');
+  .then(dbGardenData =>{
+    const garden = dbGardenData.map(garden => garden.get({
+      plain: true 
+    }))
+    res.render('one-garden',{
+      garden,
+      loggedIn: req.session.loggedIn
+    })
+  })
 
 })
 
 
 
-router.get
+
 
 module.exports = router;

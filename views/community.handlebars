@@ -1,1 +1,6 @@
-"Community" will be shown here
+<section class="garden-list">
+  {{#each gardens as |garden|}}
+  <div>
+    {{> garden-item garden }}
+  </div>
+</section>
