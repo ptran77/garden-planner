@@ -227,3 +227,15 @@ footer {
 .plant-dropdown:hover #dropdown-plant-choices {
   display: block;
 }
+
+@media screen and (max-width: 980px) {
+  header {
+   position: relative;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  header {
+     position: relative;
+  }
+}
