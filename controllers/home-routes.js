@@ -19,6 +19,7 @@ router.get('/signup', (req, res) => {
   res.render('signup')
 })
 
+// Community Page where all the created gardens can be seen
 router.get('/community', (req, res) => {
   Garden.findAll ({
     attributes: ['id', 'garden_name', 'created_at'], 
@@ -38,6 +39,7 @@ router.get('/community', (req, res) => {
 
 });
 
+// single garden page by the community that contains all information about the garden
 router.get('/community/garden/:id', (req, res) => {
   Garden.findOne ({
     where: {

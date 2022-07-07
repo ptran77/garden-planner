@@ -2,6 +2,7 @@ const { Plant } = require('../models');
 const router = require('express').Router();
 const withAuth = require('../utils/auth');
 
+// main plant page where all plants can be seen
 router.get('/', (req, res) => {
     Plant.findAll({
         attributes: [
@@ -28,6 +29,7 @@ router.get('/', (req, res) => {
 });
 
 
+// plant info page about a single plant
 router.get('/info/:id', (req, res) => {
     Plant.findOne({
         where: {
@@ -61,6 +63,7 @@ router.get('/info/:id', (req, res) => {
    });
 });
 
+// add plant page where only logged in users can access
 router.get('/add-plant', withAuth, (req, res) => {
     res.render('add-plant', {
         loggedIn: req.session.loggedIn
