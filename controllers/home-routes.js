@@ -16,16 +16,14 @@ router.get('/signup', (req, res) => {
 
 router.get('/community', (req, res) => {
   Garden.findAll ({
-    attributes: ['id', 'garden_name','created at'], 
+    attributes: ['id', 'garden_name'], 
     include: {
       model: User, 
       attributes: ['username'] 
     }
   })
   .then(dbGardenData =>{
-    const gardens = dbGardenData.map(garden => garden.get({
-      plain: true 
-    }))
+    const gardens = dbGardenData.map(garden => garden.get({ plain: true }))
     res.render('community',{
       gardens,
       loggedIn: req.session.loggedIn
@@ -40,7 +38,7 @@ router.get('/community/garden/:id', (req, res) => {
     where: {
       id: req.params.id
     },
-    attributes: ['id', 'garden_name','created at'], 
+    attributes: ['id', 'garden_name'], 
     include:[
       {
         model: User, 
@@ -53,9 +51,7 @@ router.get('/community/garden/:id', (req, res) => {
     ]  
   })
   .then(dbGardenData =>{
-    const garden = dbGardenData.map(garden => garden.get({
-      plain: true 
-    }))
+    const garden = dbGardenData.get({ plain: true });
     res.render('one-garden',{
       garden,
       loggedIn: req.session.loggedIn
