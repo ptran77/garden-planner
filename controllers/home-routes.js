@@ -73,4 +73,8 @@ router.get('/zone', (req, res) => {
   res.render('zoneSearch');
 });
 
+router.get('/home', (req, res) => {
+  res.render('homepage')
+});
+
 module.exports = router;
