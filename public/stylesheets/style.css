@@ -88,6 +88,9 @@ form label {
 }
 
 header {
+  position:-webkit-sticky;
+  position: sticky;
+  top: 0;
   border-bottom: 5px solid #b0d796;
   display: flex;
   flex-direction: column;
