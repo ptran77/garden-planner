@@ -114,7 +114,7 @@ header h1 {
   background-color: #70ad47;
 }
 
-.navbar a {
+.navbar a{
   float: left;
   font-size: 16px;
   font-family: "Playfair Display", serif;
@@ -138,6 +138,7 @@ header h1 {
 .dropdown {
   float: left;
   overflow: hidden;
+  text-align: center;
 }
 
 .dropdown .dropbtn {
@@ -248,4 +249,31 @@ footer {
   transition: background-color .1s;
   cursor: pointer;
   border-radius: 5px;
+}
+
+
+@media screen and (max-width: 750px) {
+  .garden-item, .plant-dropdown, #create-garden {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header h1 {
+    text-align: center;
+  }
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar a, .dropdown .dropbtn, #logout {
+    font-size: 20px;
+  }
+  .dropdown-options {
+    min-width: 100%;
+    text-align: center;
+  }
+  .garden-item, .plant-dropdown, #create-garden {
+    width: 60%;
+  }
 }
