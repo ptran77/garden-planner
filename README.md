@@ -8,6 +8,7 @@
 - [Presentation](#presentation)
 - [Tools](#tools)
 - [Installation](#installation)
+- [Deployed Link](#link)
 - [Team](#team)
 
 ## Description
@@ -16,9 +17,9 @@ _*How does your garden grow?*_
 
 Oh, not sure yet? Well, let's fix that. Our application is dedicated to those seeking to learn about gardening. Personalize your garden by adding what you're growing from our plant database. After adding your plants to your garden, you can access the specific needs of each of your plants.
 Need a little motivation on what to grow? Well, that's what the community is for! Once you're signed up, you have access to see what other gardeners are growing.
-Our application is a simple tool for beginner gardeners to build their own garden and connect with those that already have! 
+Our application is a simple tool for beginner gardeners to build their own garden and connect with those that already have!
 
-## Challenge Criteria 
+## Challenge Criteria
 
 - Use Node.js and Express.js to create a RESTful API.
 
@@ -53,6 +54,7 @@ Our application is a simple tool for beginner gardeners to build their own garde
 _Come up with application idea and user story_
 
 User story:
+
 ```
 AS A beginner gardener
 I WANT to plan a garden
@@ -83,33 +85,42 @@ Front-End
 
 - Handlebars template engine
 - Tailwind CSS
-- HTML 
+- HTML
 - CSS
 
 ## Installation
 
 - Download the zip files or clone/fork from https://github.com/ptran77/project-2
-- from the command line, run 
+- from the command line, run
+
 ```
 npm i
 ```
-- more to follow
+
+- create an '.env' file with
+  - DB_NAME set to 'garden_planner_db'
+  - DB_USER set to your mysql username
+  - DB_PW set to your mysql password
+  - SECRET set to whatever string you want
+
+## Deploy Link
+
+[Heroku Link](https://garden-planner-90482.herokuapp.com/)
 
 ## Team
 
-*Peter Tran*
+_Peter Tran_
 
 Github: [ptran77](https://github.com/ptran77)
 
-*Angel Van De Feniks*
+_Angel Van De Feniks_
 
 Github: [avandefeniks](https://github.com/avandefeniks)
 
-*Analiza Boehning*
+_Analiza Boehning_
 
 Github: [analizajb](https://github.com/analizajb)
 
-*Gonzalo Hernandez*
+_Gonzalo Hernandez_
 
 Github: [chaloh01](https://github.com/chalo01)
-
