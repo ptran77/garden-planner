@@ -70,11 +70,11 @@ router.get('/community/garden/:id', (req, res) => {
 });
 
 router.get('/zone', (req, res) => {
-  res.render('zoneSearch');
+  res.render('zoneSearch', { loggedIn: req.session.loggedIn });
 });
 
 router.get('/home', (req, res) => {
-  res.render('homepage', { loggedIn: req.session.loggedIn})
+  res.render('homepage', { loggedIn: req.session.loggedIn })
 });
 
 module.exports = router;
