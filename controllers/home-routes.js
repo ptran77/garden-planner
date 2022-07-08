@@ -74,7 +74,7 @@ router.get('/zone', (req, res) => {
 });
 
 router.get('/home', (req, res) => {
-  res.render('homepage')
+  res.render('homepage', { loggedIn: req.session.loggedIn})
 });
 
 module.exports = router;
