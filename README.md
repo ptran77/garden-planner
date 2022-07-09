@@ -6,6 +6,7 @@
 - [Challenge Criteria](#challenge-criteria)
 - [Development Process](#development-process)
 - [Presentation](#presentation)
+- [Screenshot](#screenshot)
 - [Tools](#tools)
 - [Installation](#installation)
 - [Deployed Link](#link)
@@ -70,6 +71,10 @@ _Deploy to Heroku_
 ## Presentation
 
 [Garden Planner Slides](https://docs.google.com/presentation/d/1SDK5P7pPKacl9kHSVmECmvhrcDqN86WU9VKHXsJtzis/edit?usp=sharing)
+
+## Screenshot
+
+<img src='./my-garden-planner.gif' width=500 />
 
 ## Tools
 
