@@ -1,4 +1,4 @@
-# project-2
+# Garden Planner
 
 ## Table of Contents
 
