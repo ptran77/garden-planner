@@ -1,0 +1,13 @@
+{{!-- User name associated with their garden
+Garden Name
+Date created --}}
+
+<article class="community-garden">
+  <div class="garden-header bg-blue-100 border-2 border-black rounded-lg text-center mb-2">
+    <a href="/community/{{id}}">{{title}}</a>
+    <div class="author">Posted by {{User.username}} on {{format_date created_at}}</div>
+  </div>
+  <div class="garden-content">
+    {{content}}
+  </div>
+</article>

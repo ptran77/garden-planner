@@ -1,0 +1,9 @@
+<ul class="plant-list">
+    {{#each plants as |plant|}}
+    <li>
+        <div class="plants">
+        <a href="/plants/info/{{plant.id}}">{{plant.name}}</a>
+        </div>
+    </li>
+    {{/each}}
+</ul>

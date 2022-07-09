@@ -1,0 +1,10 @@
+<!-- there is a list of gardens -->
+{{#if gardens.length}}
+<section class = "dashboard-gardens-list">
+  {{#each gardens as |garden|}}
+    {{> dashboardGardenInfo garden}}
+  {{/each}}
+</section>
+{{/if}}
+
+<a href="/dashboard/new" class="bg-orange-100 hover:bg-orange-200 text-center inline-block min-w-full p-4 text-lg rounded-lg">➕ New Garden</a>

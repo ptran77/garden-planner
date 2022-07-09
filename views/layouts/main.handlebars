@@ -1,0 +1,78 @@
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Garden Planner</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon (3).ico"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
+    ></script>
+    <div class="wrapper">
+      <header>
+        <h1 class="flex sm:justify-center">
+          My Garden Planner
+        </h1>
+      </header>
+
+      <div class="navbar flex justify-center md:justify-start">
+        <a href="/home">Home</a>
+        <a href="/community">Community</a>
+
+        <div class="dropdown">
+          <button class="dropbtn">Dashboard
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-options">
+            <a href="/dashboard">My Garden</a>
+            <a href="/plants">All Plants</a>
+            <a href="/plants/add-plant">Add Plant Item</a>
+            <a href="/zone">Garden Zone</a>
+          </div>
+        </div>
+        {{#if loggedIn}}
+          <div id="logout">Logout</div>
+        {{else}}
+          <a href="/login" class="">Login</a>
+        {{/if}}
+      </div>
+
+      <main>
+        {{{body}}}
+      </main>
+      <footer>
+        Thanks for visiting!
+      </footer>
+    </div>
+    {{#if loggedIn}}
+      <script src="/js/logout.js"></script>
+    {{/if}}
+  </body>
+</html>

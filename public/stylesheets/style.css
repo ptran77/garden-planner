@@ -1,0 +1,279 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  color: rgb(0, 0, 0);
+}
+
+a {
+  text-decoration: none;
+  color: #d6cdbf;
+  font-weight: bold;
+  transition: color 0.1s;
+}
+
+a:hover {
+  color: #000000;
+}
+
+button {
+  background-color: #d6cdbf;
+  border: 0;
+  padding: 2%;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  transition: background-color 0.1s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #58a3b4;
+}
+
+textarea,
+input {
+  padding: 0.5%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+  border: 1px solid #525a41;
+}
+
+textarea {
+  min-width: 40%;
+  min-height: 100px;
+}
+
+input[type="text"] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+form {
+  background-color: #d6cdbf;
+  padding: 12px 20px;
+  border-radius: 10px;
+}
+/* *
+form > div {
+  margin-bottom: 2%;
+}
+**/
+form label {
+  display: block;
+  font-family: "Pangolin";
+  font-weight: bold;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  position:-webkit-sticky;
+  position: sticky;
+  top: 0;
+  border-bottom: 5px solid #b0d796;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #3f3f3fff;
+}
+
+header h1 {
+  font-family: "Playfair Display", serif;
+  color: rgb(250, 250, 250);
+  font-size: 3em;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(164, 174, 181);
+  letter-spacing: 4px;
+}
+
+
+/* NAV BAR */
+.navbar {
+  overflow: hidden;
+  background-color: #70ad47;
+}
+
+.navbar a{
+  float: left;
+  font-size: 16px;
+  font-family: "Playfair Display", serif;
+  color: #3f3f3fff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#logout {
+  color: rgb(233, 151, 0);
+  float: left;
+  font-size: 16px;
+  font-family: Pangolin;
+  color: rgb(36, 49, 58);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+  text-align: center;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: "Playfair Display", serif;
+  margin: 0;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn,
+#logout:hover {
+  background-color: #b1d49a;
+}
+
+.dropdown-options {
+  display: none;
+  position: absolute;
+  background-color: #b1d49a;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-options a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-options a:hover {
+  background-color: #70ad47;
+}
+
+.dropdown:hover .dropdown-options {
+  display: block;
+}
+/* END NAV BAR */
+
+nav {
+  word-spacing: 2em;
+  font-family: "Pangolin", cursive;
+  font-size: 1.2em;
+}
+
+main {
+  flex: 1;
+  padding: 2% 4%;
+  background-color: #bee395ff;
+}
+
+footer {
+  border-top: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  padding: 1%;
+  font-size: 110%;
+}
+
+.garden-item {
+  width: 20%;
+  margin: auto;
+}
+
+.remove-plant {
+  display: none;
+}
+
+.garden-item:hover .remove-plant {
+  display: inline;
+}
+
+.plant-dropdown {
+  width: 20%;
+  margin: auto;
+  text-align: center;
+}
+
+#dropdown-plant-choices {
+  display: none;
+}
+
+.plant-dropdown:hover #dropdown-plant-choices {
+  display: block;
+}
+
+.plants {
+  background: #D6CDBF;
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 5px;
+  margin: 2px;
+}
+
+#add-plant-btn {
+  background-color: black;
+  border: 0;
+  padding: 2%;
+  color: #D6CDBF;
+  font-weight: bold;
+  transition: background-color .1s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+@media screen and (max-width: 750px) {
+  .garden-item, .plant-dropdown, #create-garden {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header h1 {
+    text-align: center;
+  }
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar a, .dropdown .dropbtn, #logout {
+    font-size: 20px;
+  }
+  .dropdown-options {
+    min-width: 100%;
+    text-align: center;
+  }
+  .garden-item, .plant-dropdown, #create-garden {
+    width: 60%;
+  }
+}
